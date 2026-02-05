@@ -23,10 +23,10 @@ export const AIMessage: React.FC<AIMessageProps> = ({
   const [isThinkingExpanded, setIsThinkingExpanded] = useState(true);
   const [thinkingSeconds, setThinkingSeconds] = useState(0);
   const thinkingStartRef = useRef<number | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const hasThinking = message.reasoning_content && message.reasoning_content.length > 0;
-  const isThinking = message.isStreaming && hasThinking && !message.content;
+  const hasThinking = !!(message.reasoning_content && message.reasoning_content.length > 0);
+  const isThinking = !!(message.isStreaming && hasThinking && !message.content);
 
   // 思考计时器 - 当开始收到 reasoning_content 时启动
   useEffect(() => {
