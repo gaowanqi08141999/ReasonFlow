@@ -6,9 +6,8 @@
 
 ## Features
 
-- **UI 复刻** - 精确还原 DeepSeek 官网设计
 - **流式响应** - 实时展示 AI 思考过程（CoT）和最终回答
-- **CoT 交互反馈**（核心创新）：
+- **CoT 交互反馈**：
   - 悬停高亮思考段落
   - 框选文字添加精准评论
   - 评论标签可视化
@@ -48,10 +47,6 @@ VITE_DEEPSEEK_API_KEY=your_api_key_here
 npm run dev
 ```
 
-### 4. Open browser
-
-Visit http://localhost:5173
-
 ## How It Works
 
 ### CoT Interactive Feedback
@@ -78,15 +73,6 @@ src/
 │   └── chat.ts           # TypeScript types
 └── App.tsx               # Main app
 ```
-
-## Deploy
-
-### Deploy to Vercel (Recommended)
-
-1. Push code to GitHub
-2. Visit [vercel.com](https://vercel.com) and import project
-3. Add Environment Variable: `VITE_DEEPSEEK_API_KEY`
-4. Click Deploy
 
 ## License
 
